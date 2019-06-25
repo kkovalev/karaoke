@@ -28,7 +28,7 @@ module.exports = {
     globals: {
         window: true,
     },
-    rules: {
+    rules: { // Fixable only
         /** Possible Errors */
         'no-extra-boolean-cast': 'error',
         'no-extra-parens': ['error', 'all', { ignoreJSX: 'multi-line' }],
