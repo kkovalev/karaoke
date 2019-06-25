@@ -6,7 +6,7 @@ export default function PhraseView({ timeStart, words }) {
     <div>
       <time>{timeStart}</time>
       {words.map(({ word, timeStart }) => {
-        return [<span time-start={timeStart}>{word}</span>, ' ']
+        return [<span time-start={timeStart} key={timeStart}>{word}</span>, ' ']
       })}
     </div>
   );

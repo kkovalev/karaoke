@@ -2,7 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import copyState from '../../lib/copyState';
 import bindDispatch from '../../lib/bindDispatch';
-import {togglePlayPause} from './actions';
+import {togglePlayPause, handleTimeUpdate} from './actions';
 import Control from './Control';
 
 class AudioPlayer extends React.Component {
@@ -17,13 +17,13 @@ class AudioPlayer extends React.Component {
     }
 
     render(){
-        const { isPlaying, togglePlayPause } = this.props;
+        const { isPlaying, togglePlayPause, handleTimeUpdate } = this.props;
 
         return (
             <div className="player">
                 <Control onClick={togglePlayPause} isPlaying={isPlaying}/>
 
-                <audio src="/audio.wav" ref={this.ref}/>
+                <audio src="/audio.wav" ref={this.ref} onTimeUpdate={handleTimeUpdate}/>
             </div>
         )
     }
@@ -31,5 +31,5 @@ class AudioPlayer extends React.Component {
 
 export default connect(
     copyState,
-    bindDispatch({togglePlayPause}),
+    bindDispatch({togglePlayPause, handleTimeUpdate}),
 )(AudioPlayer);

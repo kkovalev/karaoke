@@ -1,3 +1,4 @@
 export default {
-    isPlaying: false
+    isPlaying: false,
+    currentTime: 0.0
 };

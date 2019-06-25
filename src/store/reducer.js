@@ -11,6 +11,20 @@ const Reducer = {
             isPlaying: payload,
         };
     },
+
+    TIME_UPDATE(state, { payload }){
+        return {
+            ...state,
+            currentTime: payload,
+        };
+    },
+
+    SET_MARKED_TIME(state, { payload }){
+        return {
+            ...state,
+            markedTime: payload,
+        };
+    }
 };
 
 export default (state = initialState, action) =>
