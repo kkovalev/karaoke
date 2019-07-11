@@ -6,7 +6,7 @@
         "jsx": "react",
         "strict": true,
         "moduleResolution": "node",
-        "lib": ["dom", "es5", "scripthost", "es2015.promise", "esnext"],
+        "lib": ["dom", "es5", "esnext"],
         "allowSyntheticDefaultImports": true,
         "esModuleInterop": true,
         "forceConsistentCasingInFileNames": true,

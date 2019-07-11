@@ -1,3 +1,3 @@
-import TextView from "./text-view";
+import StaticMarkup from "./static-markup";
 
-export default TextView;
+export default StaticMarkup;
